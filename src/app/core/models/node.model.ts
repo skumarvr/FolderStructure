@@ -5,10 +5,4 @@ export class NodeModel {
     public name?: string;
     public children?: NodeModel[];
     public id: string;
-
-    constructor(theId: string, theType: NodeModelType, theName: string) {
-        this.type = theType;
-        this.name = theName;
-        this.id = theId;
-    }
 }
