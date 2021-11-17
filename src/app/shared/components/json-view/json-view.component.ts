@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-json-view',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./json-view.component.scss']
 })
 export class JsonViewComponent implements OnInit {
+  @Input()
+  jsonStr: string;
 
   constructor() { }
 

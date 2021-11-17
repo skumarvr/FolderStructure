@@ -3,8 +3,8 @@
 </div>
 
 <div class="content" role="main">
-  <app-test-comp></app-test-comp>
-  <app-tree-view></app-tree-view>
+  <app-tree-view (updated)="onUpdated($event)"></app-tree-view>
+  <app-json-view [jsonStr]="folderStructureJson"></app-json-view>
 </div>
 
 <router-outlet></router-outlet>
