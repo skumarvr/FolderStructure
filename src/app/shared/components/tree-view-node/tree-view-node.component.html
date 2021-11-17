@@ -1,0 +1,9 @@
+<div class="folder-node.component.html">
+    <ul *ngFor = "let node of nodes"> 
+        <li>  
+            {{node.name}} 
+            <app-tree-view-node [nodes]="node.children"></app-tree-view-node> 
+        </li>
+    </ul>
+</div>
+

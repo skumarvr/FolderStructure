@@ -10,6 +10,10 @@ export class NodeService {
   private idMap = new Map<string, NodeModel>();
   private parentId = '0';
 
+  public get rootNodes() {
+    return this.rootNode.children;
+  }
+
   constructor() { 
     this.rootNode = {
       id: this.parentId,

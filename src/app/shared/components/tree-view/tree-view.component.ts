@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NodeModel } from 'src/app/core/models/node.model';
 import { NodeService } from 'src/app/core/services/node.service';
 
 @Component({
@@ -10,8 +11,13 @@ export class TreeViewComponent implements OnInit {
   @Output() updated = new EventEmitter<boolean>();
   
   private id: number = 1;
+  public rootNodes: NodeModel[] = [];
 
-  constructor(private nodeService: NodeService) { }
+  constructor(private nodeService: NodeService) {
+    if(nodeService.rootNodes) {
+      this.rootNodes = nodeService.rootNodes;
+    }
+  }
 
   ngOnInit(): void {
   }
